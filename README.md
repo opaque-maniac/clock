@@ -33,7 +33,7 @@ Make sure you have Node.js installed on your machine. You can download it from h
 
 2. Navigate to the project directory.
    ```bash
-   cd calculator
+   cd clock
    ```
 3. Install dependencies.
    ```bash

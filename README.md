@@ -2,13 +2,16 @@
 
 A simple web-based clock built using **HTML**, **CSS**, and **TypeScript**. The project uses Parcel as the bundler for development and production builds.
 
-![Screenshot of a the clock app during development.](./readme_images/clock.png)
+![Screenshot of a the analogue clock app during development.](./readme_images/clock.png)
+![Screenshot of a the digital clock app during development.](./readme_images/digital.png)
 
 ## Features
 
-- This is just a clock phase with the second, minute and hour hands.
+- The first app is just a clock phase with the second, minute and hour hands.
 - It re-adjusts to the current time of user's browser.
 - It automatically increments to show correct time, **All three arms adjust angle**
+- The second one is a simple digital clock with numeric values that adjust based on change in time.
+- Both apps use the **Date** class in javcascript.
 
 ## Technologies Used
 
@@ -42,37 +45,44 @@ Make sure you have Node.js installed on your machine. You can download it from h
 
 ### Running the app in development
 
-To run the calculator in development mode with live reloading, use the following command:
+To run the clock in development mode with live reloading, use the following command:
+
+To start the digital clock, run:
 
 ```bash
-npm run start
+npm run start-digital
+```
+
+To start the analogue clock, run:
+
+```bash
+npm run start-analogue
 ```
 
 The app will run on [localhost](http://localhost:1234)
 
-### Building the app for production
-
-To buld the app and transpile the typescript for production, use the following command:
-
-```bash
-npm run start
-```
-
-The build code will be in the **dist** folder.
+If the port is different, **check the terminal**.
 
 ## Project Structure
 
 ```
 clock/
 │
-├── dist/                # Compiled production files (generated after build)
 │
 ├── src/                 # Source code
-│   ├── scripts/         # TypeScript logic
-│   │   └── index.ts     # Main TypeScript file
-│   ├── styles/          # CSS files
-│   │   └── styles.css   # Main CSS file
-│   └── index.html       # Main HTML file
+|   |── Digital             # Digital app code
+|   |  ├── scripts/         # TypeScript logic
+|   |  │   └── index.ts     # Main TypeScript file
+|   |  ├── styles/          # CSS files
+|   |  │   └── styles.css   # Main CSS file
+|   |  └── index.html       # Main HTML file
+│   |
+|   └── Analogue            # Analogue app code
+|      ├── scripts/         # TypeScript logic for
+|      │   └── index.ts     # Main TypeScript file
+|      ├── styles/          # CSS files
+|      │   └── styles.css   # Main CSS file
+|      └── index.html       # Main HTML file
 │
 ├── package.json         # Project configuration and dependencies
 ├── tsconfig.json        # TypeScript configuration
